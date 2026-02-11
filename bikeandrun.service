@@ -14,7 +14,7 @@ StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=bikeandrun
 Environment=NODE_ENV=production
-Environment=PORT=3000
+Environment=PORT=4221
 
 [Install]
 WantedBy=multi-user.target
