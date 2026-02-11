@@ -1,0 +1,20 @@
+[Unit]
+Description=Bike and Run Forum - Next.js Application
+After=network.target
+
+[Service]
+Type=simple
+User=forum
+Group=forum
+WorkingDirectory=/home/forum/bikeandrun
+ExecStart=/home/forum/.nvm/versions/node/v22.21.1/bin/node /home/forum/bikeandrun/node_modules/.bin/next start
+Restart=on-failure
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=bikeandrun
+Environment=NODE_ENV=production
+Environment=PORT=3000
+
+[Install]
+WantedBy=multi-user.target
